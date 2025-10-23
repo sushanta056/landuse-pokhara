@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Landuse Prediction</title>
+</head>
+<body>
+    <h1>Upload GeoTIFF File for Prediction</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="tif" accept=".tif" required>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
