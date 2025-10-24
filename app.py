@@ -11,6 +11,9 @@ OUT_FILENAME = "predicted_landuse.tif"
 
 app = Flask(__name__)
 
+app.config['MAX_CONTENT_LENGTH'] = 200 * 1024 * 1024  # 200 MB limit
+
+
 # Load the model once at startup
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(f"Model file not found: {MODEL_PATH}")
